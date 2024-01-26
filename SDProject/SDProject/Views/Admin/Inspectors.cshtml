@@ -1,0 +1,49 @@
+﻿@model IEnumerable<CaseInspector>
+@{
+    ViewData["Title"] = "List of inspectors";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\css\cases.css" />
+
+    <title>Inspectors</title>
+
+</head>
+
+<body>
+    <div class="form_">
+        <br>
+        <div class="table">
+            <table>
+                <thead>
+                <td class="id">
+                    Inspector ID
+                </td>
+                <td class="name">
+                    Name
+                </td>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @item.InspectorId
+                            </td>
+                            <td>
+                                @item.Name
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+</html>

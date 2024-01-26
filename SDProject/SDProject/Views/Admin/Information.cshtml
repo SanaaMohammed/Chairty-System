@@ -1,0 +1,86 @@
+﻿@model Case
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\css\information.css">
+    <title>Information</title>
+</head>
+
+<body>
+    <div class="form_">
+        <header style="font-weight: bold; font-size: 30px; padding: 20px;">Register A New Case</header>
+
+        <form method="post" asp-action="Information">
+            <div style="display: flex; flex-direction: row;">
+                <div>
+                    <input asp-for="FirstName" type="text" required placeholder="First Name">
+                    <span asp-validation-for="FirstName"></span>
+                </div>
+                <div style="margin-left:10px;">
+                    <input asp-for="LastName" type="text" required placeholder="Last Name">
+                    <span asp-validation-for="LastName"></span>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-direction: row; margin-top: 20px;">
+                <div>
+                    <input asp-for="Age" type="number" min="1" required placeholder="Age">
+                    <span asp-validation-for="Age"></span>
+                </div>
+
+                <div style="margin-left:10px;">
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                        <input asp-for="CaseGender" type="radio" id="male" name="CaseGender" value="1">
+                        <label for="male">Male</label>
+                    </div>
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                        <input asp-for="CaseGender" type="radio" id="female" name="CaseGender" value="2">
+                        <label for="female">Female</label>
+                    </div>
+                    <span asp-validation-for="CaseGender"></span>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-direction: row; margin-top: 20px;">
+                <div>
+                    <input asp-for="Address" type="text" required placeholder="Valid address">
+                    <span asp-validation-for="Address"></span>
+                </div>
+                <div style="margin-left:10px;">
+                    <input asp-for="PhoneNumber" type="text" required placeholder="Valid phone number">
+                    <span asp-validation-for="PhoneNumber"></span>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-direction: row; margin-top: 20px;">
+                <div>
+                    <input asp-for="FamilySize" type="number" min=2 required placeholder="Number of family members">
+                    <span asp-validation-for="FamilySize"></span>
+                </div>
+                <div style="margin-left:10px;">
+                    <input asp-for="MonthlyEarnings" type="text" required placeholder="Monthly Income">
+                    <span asp-validation-for="MonthlyEarnings"></span>
+                </div>
+            </div>
+            <div style="display: flex; flex-direction: row; margin-top: 20px;">
+                <div>
+                    <input asp-for="InspectorId" type="number" required placeholder="Inspector ID">
+                    <span asp-validation-for="InspectorId"></span>
+                </div>
+
+                <div style="margin-left:10px;">
+                    <input asp-for="Dieseases" type="text" required placeholder="Dieseases">
+                    <span asp-validation-for="Dieseases"></span>
+                </div>
+            </div>
+            <div>
+                <input asp-for="GeneralNotes" type="text" style="height: 80px;" required placeholder="GeneralNotes">
+                <span asp-validation-for="GeneralNotes"></span>
+            </div>
+
+            <input class="sub" type="submit" value="Submit">
+
+        </form>
+    </div>
+</body>

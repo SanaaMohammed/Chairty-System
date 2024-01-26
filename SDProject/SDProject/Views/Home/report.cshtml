@@ -1,0 +1,66 @@
+@model Report
+<!-- create an account -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <mata name="description" content="This Is Description For My First Page">
+        <title>Add Report</title>
+</head>
+<body>
+    <form style=" width:430px; ;margin: auto; margin-top:80px; height:580px;background-color: rgba(14, 176, 208, 0.2);
+     border-radius: 18px;">
+        <div style="  width:200px; margin:auto;position:relative; padding:10px; top:30px;
+    text-align: center; font-weight:bold;font-size: larger;">
+            Fill The Report
+        </div>
+        <br>
+        <div style="margin-left: 30px;margin-bottom: 10px;">Case ID</div>
+        <input asp-for="MyCase.CaseId" class="1" type="number" min="1" required placeholder="Type Id of Inspector" style="  width:350px;
+        height: 30px;margin-left: 40px;margin-bottom: 10px;border-color: transparent transparent  #b4afaf transparent;
+        background-color:rgba(255, 255, 255, 0.4)">
+        <span asp-validation-for="MyCase.CaseId"></span>
+        <br>
+        <div class="email">
+            <div style="margin-left: 30px;margin-bottom: 10px;">Is the data valid?</div>
+            <input asp-for="IfDataValid" class="1" type="checkbox" required placeholder="Type User Email" style="  width:350px;
+    height: 30px;margin-left: 40px;margin-bottom: 10px;border-color: transparent transparent  #b4afaf transparent;
+    background-color:rgba(255, 255, 255, 0.4)">
+            <span asp-validation-for="IfDataValid"></span>
+
+        </div>
+        <br>
+        <div class="pass" style="text-align: center;">
+            <div style="margin-bottom: 10px;">Type of Case</div>
+            <select asp-for="TypeOfCase" name="case's_type" style="width: 100px;
+            height: 40px;
+            text-align: center;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.4);
+            font-size: large;
+            font-weight: 200;
+            border-radius: 5px;">
+                <option value="1">Poor</option>
+                <option value="2">Deptor</option>
+                <option value="3">Chronic Disease Patient</option>
+                <option value="4">Others</option>
+            </select>
+            <span asp-validation-for="TypeOfCase"></span>
+        </div>
+        <br>
+        <div>
+            <div>
+                <div style="margin-left: 30px; margin-bottom: 10px;">Conclusion</div>
+                <textarea asp-for="FinalConclusion" rows="3" required placeholder="Enter a total conclusion about the case" style="width: 350px;
+margin-left: 40px; border-color: transparent transparent  #b4afaf transparent; background-color:
+rgba(255, 255, 255, 0.4); resize: vertical;"></textarea>
+                <span asp-validation-for="FinalConclusion"></span>
+            </div>
+        <div>
+            <input class="sub" type="submit" value="Submit" style=" position: relative; width:360px;
+            height: 40px;  margin-top:30px;margin-left:30px; border-radius:10px;  background-color:rgba(255, 255, 255, 0.4); text-align:center;">
+        </div>
+    </form>
+</body>
+</html>

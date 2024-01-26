@@ -1,0 +1,30 @@
+﻿<!-- Add case or create account -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <mata name="description" content="This Is Description For My First Page">
+        <title>Admin</title>
+        <link rel="stylesheet" href="..\css\data.css">
+
+</head>
+<body>
+    <div class="form_">
+        <form>
+            <div>
+                <input class="sub" type="submit" value="Add Case" asp-action="Information" asp-controller="Admin">
+            </div>
+            <div>
+                <input class="sub" type="submit" value="Create account" asp-action="Create" asp-controller="Admin">
+            </div>
+            <div>
+                <input class="sub" type="submit" value="Show Inspectors" asp-action="Inspectors" asp-controller="Admin">
+            </div>
+            <div>
+                <input class="sub" type="submit" value="Show Reports" asp-action="Reports" asp-controller="Admin">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

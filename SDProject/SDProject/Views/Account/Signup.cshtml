@@ -1,0 +1,44 @@
+﻿@model Admin
+<!-- create an account -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <mata name="description" content="This Is Description For My First Page">
+
+        <title>Create Account</title>
+        <link rel="stylesheet" href="..\css\registration.css">
+</head>
+<body>
+    <div class="form_">
+        <header style="font-weight: bold; font-size: 30px; padding: 30px;">Register A New Admin</header>
+    <form asp-action="Signup" method="post">      
+        <div class="name">
+                <input asp-for="Name" class=" 1"  type="text" required placeholder="Name">
+            <span asp-validation-for="Name"></span>
+        </div>
+            <br>
+            <div class="email">
+                <input asp-for="Email" class=" 1" type="text" required placeholder="Email">
+                <span asp-validation-for="Email"></span>
+            </div>
+            <br>
+            <div class="pass">
+                <input asp-for="Password" type="password" required placeholder="Password">
+                <span asp-validation-for="Password"></span>
+            </div>
+            <br>
+            <div class="ensurePassword">
+                <input asp-for="ConfirmPassword" type="password" required placeholder="Confirm password">
+                <span asp-validation-for="ConfirmPassword"></span>
+            </div>
+            <br>
+            <div>
+                <input class="sub" type="submit" value="Sign Up" >
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>

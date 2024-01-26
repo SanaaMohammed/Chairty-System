@@ -1,0 +1,45 @@
+﻿@model CaseInspector
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <mata name="description" content="This Is Description For My First Page">
+        <title>Create Case Inspector Account</title>
+        <link rel="stylesheet" href="..\css\registration.css" />
+</head>
+<body>
+    <div class="form_">
+        <header style="font-weight: bold; font-size: 30px; padding: 30px;">Register A New Inspector</header>
+        <form method="post" asp-action="Create">
+            <div class="name">
+                <input asp-for="Name" type="text" required placeholder="Name">
+                <span asp-validation-for="Name"></span>
+            </div>
+            <br>
+            <div class="email">
+                <input asp-for="Email" type="text" required placeholder="Email">
+                <span asp-validation-for="Email"></span>
+            </div>
+            <br>
+            <div class="pass">
+                <input asp-for="Password" type="password" required placeholder="Password">
+                <span asp-validation-for="Password"></span>
+            </div>
+            <br>
+            <div class="salary">
+                <input asp-for="Salary" type="text" required placeholder="Salary">
+                <span asp-validation-for="Salary"></span>
+            </div>
+            <div>
+                <input asp-for="ImageData" type="file" name="image" accept="image/*" style="margin-left: 40px;">
+            </div>
+            <div>
+                <input class="sub" type="submit" value="Sign Up">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

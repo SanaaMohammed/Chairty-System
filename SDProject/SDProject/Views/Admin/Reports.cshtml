@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Report>
+@{
+    ViewData["Title"] = "List of all reports";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\css\cases.css" />
+    <title>Reports</title>
+</head>
+<body>
+    <div class="form_">
+        <br>
+        <div class=" table">
+            <table>
+                <thead>
+                <td class="id">
+                    Case Id
+                </td>
+                <td class="id">
+                    Report Id
+                </td>
+                <td class="Conc">
+                    Conclusion
+                </td>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @item.CaseId
+                            </td>
+                            <td>
+                                @item.ReportId
+                            </td>
+                            <td>
+                                @item.FinalConclusion
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

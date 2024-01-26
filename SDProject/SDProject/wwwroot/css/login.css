@@ -1,0 +1,26 @@
+body {
+    background-image: url('Help-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.form_ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 300px;
+    flex-direction: column;
+    background: rgba(14, 176, 208, 0.2);
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+    margin-top: 90px;
+    border: 1px solid rgba(23, 35, 42, 0.5);
+    margin-top: 10%;
+}
+

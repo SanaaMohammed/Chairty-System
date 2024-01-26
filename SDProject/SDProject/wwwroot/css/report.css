@@ -1,0 +1,94 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-image: url('Help-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    background: rgba(14, 176, 208, 0.2);
+    width: 400px;
+    height: 500px;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    margin-top: 90px;
+    border-radius: 10px;
+    border: 1px solid rgba(23, 35, 42, 0.5);
+}
+
+p {
+    font-weight: 600;
+    text-align: left;
+    margin-left: 30 px;
+    text-shadow: 1px 1px rgba(23, 35, 42, 0.4);
+    margin-left: 10px;
+
+
+}
+
+.check_data {
+    font-size: larger;
+    font-weight: 300;
+    background-position: center;
+
+}
+
+.type {
+    font-size: larger;
+    font-weight: 300;
+    background-position: center;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+
+    border: 2px 2px whitesmoke;
+}
+
+.type p {
+    margin-right: 5px;
+
+}
+
+select {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: large;
+    font-weight: 200;
+    border-radius: 5px;
+
+}
+
+.conc p {
+    font-size: larger;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+
+textarea {
+    text-align: center;
+    margin-left: 40px;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: medium;
+    border-radius: 10px;
+}
+
+input[type="submit"] {
+    width: 120px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    font-size: large;
+    font-weight: 200;
+
+}
